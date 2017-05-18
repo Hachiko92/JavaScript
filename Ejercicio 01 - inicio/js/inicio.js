@@ -1,9 +1,9 @@
 /* constantes */
 
-// la buena practica es poner los textos en constantes 
-// tambien por facilidar una sucesiva traduccion
-// las constantes se escriben mayusculas
-//const SALUDO = 'Hola ';
+/*  la buena practica es poner los textos en constantes 
+    tambien por facilidar una sucesiva traduccion
+    las constantes se escriben mayusculas
+    const SALUDO = 'Hola ';*/
 const SALUDO = 'Hello ';
 
 /* variabiles */
@@ -29,17 +29,17 @@ var esMalo = false;
 // undefined
 var queSoy;
 
-/* interpolacion */
-// sGrupo no va a conservar la variable si no su contenido
-// entre comilla francesa (gracias a ES6)
+/*  interpolacion
+    sGrupo no va a conservar la variable si no su contenido
+    entre comilla francesa (gracias a ES6) */
 // var sGrupo = `&{stringa} & &{stringa2}`
 var sGrupo = `<ul>
                 <li>${stringa}</li>
                 <li>${stringa2}</li>
               </ul>`
 
-// alert lo pongo entre comillas porque si no se dispara
-// a la apertura de la pagina
+/*  alert lo pongo entre comillas porque si no se dispara
+    a la apertura de la pagina */
 // oButton1.onclick = "alert('Hola')";
 
 // declaro la funcion "saludar"
@@ -54,9 +54,9 @@ function saludar() {
 
     oRespuesta.innerHTML = "<strong>" + sSaludo + "</strong>";
     oRespuesta.innerHTML += sGrupo;
-    // nEdad + 2 convierte el numero en texto porque el '+' es
-    // ambiguo y piensa que sea una conquetacion
-    // poniendo un '+' adelante lo va a considerar como numero
+    /*  nEdad + 2 convierte el numero en texto porque el '+' es
+        ambiguo y piensa que sea una conquetacion
+        poniendo un '+' adelante lo va a considerar como numero */
     oRespuesta.innerHTML += +nEdad+2;
     //alert(sSaludo);
 }
