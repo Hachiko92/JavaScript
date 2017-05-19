@@ -1,5 +1,3 @@
-const prompt = require('prompt');
-
 /* ***** Functiones ***** */
 let sumar = (a, b) => {
     return Number(a) + Number(b)
@@ -20,26 +18,37 @@ let moltiplicar = (a, b) => {
 // Normalmente las funciones no imprimen nada en plantalla, lo hace el "main"
 let calculadora = (a=0, b=0, char) => {
     let result = 0;
-    
-    if (char == 's' || char == 'S'){
-        result = (sumar(a, b));
-    } else{
-        if (char == 'r' || char == 'R'){
+    switch (char) {
+        case 's':
+        case 'S':
+        case '+':
+            result = (sumar(a, b));
+            break;
+        case 'r':
+        case 'R':
+        case '-':
             result = (restar(a, b));
-        } else {
-            if (char == 'd' || char == 'D'){
-                result = (dividir(a,b));
-            } else {
-                if (char == 'm' || char == 'M'){
-                    result = (moltiplicar(a,b));
-                } else {
-                    result = ("Scelta invalida");
-                }
-            }
-        }
+            break;
+        case 'd':
+        case 'D':
+        case '/':
+        case ':':
+            result = (dividir(a,b));
+            break;
+        case 'm':
+        case 'M':
+        case '*':
+        case 'x':
+        case 'X':
+            result = (moltiplicar(a,b));
+            break;
+        default:
+            result = ("Scelta invalida");
+            break;
     }
 
-    return (result);
+    return result;
+
 }
 
 let imprimir = (datos) => {
@@ -51,7 +60,6 @@ let imprimir = (datos) => {
 }
 
 (function main () {
-    let prompt = prompt ();
     let nNum1 = Number(prompt("Dime primer numero", 12));
     let nNum2 = Number(prompt("Dime otro", 2));
     let richiesta = `Que operación quieres hacer?

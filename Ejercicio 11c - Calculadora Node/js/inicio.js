@@ -1,5 +1,8 @@
 const prompt = require('prompt');
 
+const RICHIESTA = `Que operación quieres hacer?
+'s' = suma 'r' = resto 'd' = 'dividir 'm' = moltiplicar`;
+
 /* ***** Functiones ***** */
 let sumar = (a, b) => {
     return Number(a) + Number(b)
@@ -40,7 +43,6 @@ let calculadora = (a=0, b=0, char) => {
     }
 
     return (result);
-}
 
 let imprimir = (datos) => {
     if (isNaN(datos)){
@@ -51,15 +53,28 @@ let imprimir = (datos) => {
 }
 
 (function main () {
-    let prompt = prompt ();
-    let nNum1 = Number(prompt("Dime primer numero", 12));
-    let nNum2 = Number(prompt("Dime otro", 2));
-    let richiesta = `Que operación quieres hacer?
-    's' = suma 'r' = resto 'd' = 'dividir 'm' = moltiplicar`;
-    let sOperador = prompt(richiesta, 's');
+    let oDatos = {
+        properties : {
+            num1: {
+                description: 'Escribe un numero',
+                default: 24,
+            },
+            num2: {
+                description: 'Escribe otro',
+                default: 2,
+            },
+            operacion: {
+                description: RICHIESTA,
+                default: 's'
+            }
+        }
+    }
 
-    let sRespuesta = calculadora (nNum1, nNum2, sOperador);
+    prompt.start();
 
-    imprimir (sRespuesta);
-    
-}) (); 
+    prompt.get(oDatos, function (err, result){
+        let sRespuesta = calculadora (restult.num1, result.num2, result.operacion);
+        imprimir (sRespuesta);
+    });
+        
+}) ();
