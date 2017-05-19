@@ -25,6 +25,13 @@ function media (){
     return nResult;
 }
 
+function sumarDobles (a=0,b=0) {
+    a *= 2;
+    b *= 2;
+
+    return a + b;
+}
+
 
 function main () {
     let nNum1 = Number(prompt("Dime un número", 12));
@@ -38,6 +45,7 @@ function main () {
     console.log(sumarVarios (nNum1, nNum2, nNum3, nNum4, 13, 67, 5));
     console.log(media (nNum1, nNum2, nNum3, nNum4, 13, 67, 5));
     console.log(media (12, 12, 12, 12, 12));
+    console.log(sumarDobles (nNum1, nNum2));
 }
 
 // Invocación de la función
