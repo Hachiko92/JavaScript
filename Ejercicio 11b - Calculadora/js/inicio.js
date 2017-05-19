@@ -47,5 +47,9 @@ let calculadora = (a=0, b=0, char) => {
 
     let rRespuesta = calculadora (nNum1, nNum2, sOperador);
 
-    console.log(rRespuesta);
+    if (isNaN(rRespuesta)){
+        console.log("No has puesto dos numeros");
+    }else {
+        console.log("El resultado es: " + rRespuesta);
+    }
 }) ();
