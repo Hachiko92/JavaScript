@@ -16,7 +16,7 @@ let sumar = function (a,b) {
 
 // Declaración de una funcion arrow ( => )
 let restar = (a, b) => {
-    return a-b;
+    return (a - b);
 }
 
 
