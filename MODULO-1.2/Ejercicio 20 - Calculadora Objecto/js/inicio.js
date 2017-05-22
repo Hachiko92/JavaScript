@@ -72,7 +72,8 @@ var calculadora = {
         return result;
 
     },
-    pedirDatos : function () {  
+    // this tiene problemas con las funciones Arrow, así utilizo la funcion "antigua"
+    start : function () {  
         this.oDatox.num1.valor = Number(prompt(this.oDatox.num1.msg));
         this.oDatox.num2.valor = Number(prompt(this.oDatox.num2.msg));
         this.sOperacion.valor = prompt(this.sOperacion.msg);
@@ -83,4 +84,4 @@ var calculadora = {
     }
 }
 
-calculadora.pedirDatos ();
+calculadora.start ();
