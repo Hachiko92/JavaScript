@@ -28,12 +28,3 @@ function imprimir (sResult) {
 
     alert(sStringa + sResult);
 }
-
-(function main () {
-    let nNum = Number(prompt("Cual es el maximo?", 12));
-
-    let sRespuesta = fibonacci (nNum);
-
-    imprimir (sRespuesta);
-    
-}) (); 
