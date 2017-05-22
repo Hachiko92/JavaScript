@@ -1,16 +1,22 @@
+/* variables */
 var oButton = document.querySelector("#button");
 var nValue = document.querySelector("#number");
 var sRespuesta = document.querySelector("#result");
 
 oButton.onclick = calcular (nValue);
 
-function calcular (nValue) {
-    if ((nValue%2) == 0){
-        sRespuesta.innerHTML = "Numero par";
+
+function calcular (numero) {
+    console.log(numero);
+    let sResult;
+    if ((numero%2) == 0){
+        console.log(numero);
+        sResult = "Numero par";
         console.log = "Numero par";
     } else {
-        sRespuesta.innerHTML = "Numero impar";
+        sResult = "Numero impar";
         console.log = "Numero impar";
     }
+    sRespuesta.innerHTML = sResult;
 }
 
