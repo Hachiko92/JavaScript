@@ -8,7 +8,6 @@ function primeros (){
         for (j= i-1 ; j>1 ; j--){
             if ((i%j) != 0){
                 control = -10;
-                console.log(i%j);
             }
             else {
                 control2 = 5;
@@ -27,6 +26,8 @@ function primeros (){
     sStringa = sStringa.concat(aArray);
 
     alert(sStringa);
+
+    return sStringa;
 }
 
 
